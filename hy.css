@@ -1,3 +1,61 @@
+.roblox-warning {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  width: 100%;
+  margin: 18px auto 0;
+  padding: 11px 16px;
+  border: 1px solid rgba(255, 63, 74, .62);
+  border-radius: 10px;
+  color: #ff6973;
+  background: rgba(74, 9, 25, .36);
+  box-shadow: 0 0 14px rgba(255, 25, 45, .24), inset 0 0 18px rgba(255, 25, 45, .08);
+  font-family: "Noto Sans SC", sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1.6;
+  text-align: center;
+  text-shadow: 0 0 9px rgba(255, 46, 61, .72);
+  animation: roblox-warning-glow 1.8s ease-in-out infinite;
+}
+
+.roblox-warning-icon {
+  color: #ff3948;
+  font-size: 17px;
+  line-height: 1;
+}
+
+.roblox-warning a {
+  color: #fff1f2;
+  text-underline-offset: 3px;
+  text-decoration-thickness: 1px;
+  transition: color .2s ease, text-shadow .2s ease;
+}
+
+.roblox-warning a:hover,
+.roblox-warning a:focus-visible {
+  color: #ffffff;
+  text-shadow: 0 0 12px #ff3448;
+}
+
+.roblox-warning a:focus-visible {
+  outline: 2px solid #ff6973;
+  outline-offset: 4px;
+  border-radius: 3px;
+}
+
+@keyframes roblox-warning-glow {
+  0%, 100% {
+    border-color: rgba(255, 63, 74, .48);
+    box-shadow: 0 0 12px rgba(255, 25, 45, .18), inset 0 0 14px rgba(255, 25, 45, .06);
+  }
+  50% {
+    border-color: rgba(255, 89, 99, .95);
+    box-shadow: 0 0 28px rgba(255, 25, 45, .46), inset 0 0 22px rgba(255, 25, 45, .14);
+  }
+}
+
 .catalog-page .back-link {
   color: #aeb8d5;
   font-size: 11px;
@@ -611,6 +669,15 @@
 body.modal-open { overflow: hidden; }
 
 @media (max-width: 680px) {
+  .roblox-warning {
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 4px 8px;
+    margin-top: 12px;
+    padding: 10px 12px;
+    font-size: 12px;
+  }
+
   .catalog-page .back-link { font-size: 0; }
   .catalog-page .back-link span { margin: 0; font-size: 20px; }
   .catalog-heading { padding: 54px 0 54px; }

@@ -10,6 +10,14 @@ const receiptClose = document.querySelector('#receiptClose');
 const receiptItems = document.querySelector('#receiptItems');
 const receiptTotal = document.querySelector('#receiptTotal');
 const downloadReceipt = document.querySelector('#downloadReceipt');
+const studioDownload = document.querySelector('#studioDownload');
+
+studioDownload.addEventListener('click', () => {
+  // Roblox's landing endpoint creates the current installer link on each request.
+  // The timestamp prevents a cached response from reusing an older download URL.
+  const setupUrl = studioDownload.dataset.downloadUrl;
+  studioDownload.href = `${setupUrl}?source=stellar-hub&request=${Date.now()}`;
+});
 
 function openModal() {
   modal.hidden = false;
