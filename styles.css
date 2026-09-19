@@ -136,6 +136,73 @@ h1 em { color: transparent; font-style: normal; background: linear-gradient(105d
 .toast { position: fixed; z-index: 5; bottom: 28px; left: 50%; padding: 12px 18px; border: 1px solid rgba(255, 155, 175, .25); border-radius: 999px; color: #f8e9ee; background: rgba(28, 20, 47, .9); box-shadow: 0 12px 40px rgba(0, 0, 0, .3); font-family: "Noto Sans SC", sans-serif; font-size: 12px; opacity: 0; pointer-events: none; transform: translate(-50%, 10px); transition: opacity .25s ease, transform .25s ease; backdrop-filter: blur(14px); }
 .toast.show { opacity: 1; transform: translate(-50%, 0); }
 
+.game-confirm-backdrop {
+  position: fixed;
+  z-index: 15;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  padding: 20px;
+  background: rgba(4, 6, 18, .78);
+  backdrop-filter: blur(8px);
+}
+
+.game-confirm-backdrop[hidden] { display: none; }
+
+.game-confirm {
+  width: min(360px, 100%);
+  padding: 32px 28px 26px;
+  border: 1px solid rgba(255, 157, 179, .32);
+  border-radius: 20px;
+  text-align: center;
+  background: linear-gradient(145deg, rgba(44, 28, 70, .98), rgba(18, 23, 53, .98));
+  box-shadow: 0 25px 70px rgba(0, 0, 0, .48), 0 0 35px rgba(221, 87, 142, .14);
+}
+
+.game-confirm h2 {
+  margin: 0;
+  color: #fff2f5;
+  font-family: "Noto Sans SC", sans-serif;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.game-confirm-actions {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 26px;
+}
+
+.game-confirm-actions button {
+  min-width: 92px;
+  padding: 10px 20px;
+  border: 1px solid rgba(255, 157, 179, .32);
+  border-radius: 999px;
+  color: #fff;
+  font-family: "Noto Sans SC", sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background .2s ease, border-color .2s ease, transform .2s ease;
+}
+
+.game-confirm-actions button:hover { transform: translateY(-2px); }
+
+.game-confirm-yes { background: linear-gradient(135deg, #a34f76, #70456f); }
+.game-confirm-no { background: rgba(255, 255, 255, .07); }
+
+.game-confirm-actions button:hover,
+.game-confirm-actions button:focus-visible {
+  border-color: rgba(255, 185, 201, .72);
+  outline: none;
+}
+
+.game-confirm-yes:hover,
+.game-confirm-yes:focus-visible { background: linear-gradient(135deg, #bc5c86, #85527f); }
+.game-confirm-no:hover,
+.game-confirm-no:focus-visible { background: rgba(255, 255, 255, .14); }
+
 @media (max-width: 680px) {
   .page-shell { width: min(100% - 40px, 520px); }
   .site-header { padding: 20px 0; }

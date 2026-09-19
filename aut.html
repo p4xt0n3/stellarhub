@@ -1,0 +1,258 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#090d1c" />
+    <title>AUT服务</title>
+    <link rel="icon" href="stellaricon.png" type="image/png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Noto+Sans+SC:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="hy.css" />
+    <link rel="stylesheet" href="aut.css" />
+  </head>
+  <body class="aut-page">
+    <div class="space-bg" aria-hidden="true">
+      <div class="nebula nebula-one"></div>
+      <div class="nebula nebula-two"></div>
+      <div class="star-field star-field-back"></div>
+      <div class="star-field star-field-front"></div>
+      <div class="orbit orbit-one"></div>
+      <div class="orbit orbit-two"></div>
+      <div class="glow glow-one"></div>
+      <div class="glow glow-two"></div>
+    </div>
+
+    <div class="page-shell">
+      <header class="site-header">
+        <a class="brand" href="index.html#top" aria-label="返回首页">
+          <span class="brand-mark"><img src="stellaricon.png" alt="" /></span>
+          <span class="brand-copy">
+            <strong>星际社区</strong>
+            <span>STELLAR HUB</span>
+          </span>
+        </a>
+        <a class="back-link" href="index.html">返回首页 <span>↙</span></a>
+      </header>
+
+      <main class="aut-main">
+        <section class="aut-hero" aria-labelledby="aut-title">
+          <p class="eyebrow"><span></span>AUT SERVICE</p>
+          <h1 id="aut-title">AUT服务</h1>
+        </section>
+
+        <div class="aut-sections">
+          <button class="aut-section aut-section-items" type="button" data-aut-modal="items" data-aut-title="物品" aria-haspopup="dialog">
+            <p class="section-label">ITEMS</p>
+            <h2 id="items-title">物品</h2>
+            <span class="aut-section-arrow" aria-hidden="true">↗</span>
+          </button>
+
+          <button class="aut-section aut-section-skins" type="button" data-aut-modal="skins" data-aut-title="皮肤" aria-haspopup="dialog">
+            <p class="section-label">SKINS</p>
+            <h2 id="skins-title">皮肤</h2>
+            <span class="aut-section-arrow" aria-hidden="true">↗</span>
+          </button>
+
+          <button class="aut-section aut-section-characters" type="button" data-aut-modal="characters" data-aut-title="角色" aria-haspopup="dialog">
+            <p class="section-label">CHARACTERS</p>
+            <h2 id="characters-title">角色</h2>
+            <span class="aut-section-arrow" aria-hidden="true">↗</span>
+          </button>
+        </div>
+      </main>
+
+      <footer class="site-footer">
+        <span>© 2026 - <span class="current-year">2026</span> STELLAR HUB</span>
+        <span class="footer-signal"><i></i> CONNECTION STABLE</span>
+      </footer>
+    </div>
+
+    <button class="bill-button" id="autBillButton" type="button" aria-haspopup="dialog">
+      账单 <span id="autSelectedCount">0</span>
+    </button>
+
+    <div class="aut-modal-backdrop" id="autModal" hidden>
+      <section class="aut-modal" role="dialog" aria-modal="true" aria-labelledby="autModalTitle">
+        <button class="aut-modal-close" id="autModalClose" type="button" aria-label="关闭">×</button>
+        <div class="aut-modal-header">
+          <p class="modal-kicker">AUT / SERVICE</p>
+          <h2 id="autModalTitle">物品</h2>
+        </div>
+
+        <div class="aut-item-list" id="autItemList">
+          <div class="aut-item-group aut-item-group-pink">
+            <h3>Pink name item</h3>
+            <label class="aut-item-row">
+              <input type="checkbox" data-name="诅咒苹果" data-price="3" />
+              <span class="aut-item-check" aria-hidden="true"></span>
+              <span class="aut-item-name">诅咒苹果</span>
+              <strong>3￥</strong>
+            </label>
+            <label class="aut-item-row">
+              <input type="checkbox" data-name="糖刀碎片" data-price="3" />
+              <span class="aut-item-check" aria-hidden="true"></span>
+              <span class="aut-item-name">糖刀碎片</span>
+              <strong>3￥</strong>
+            </label>
+          </div>
+
+          <div class="aut-item-group aut-item-group-red">
+            <h3>Red name item</h3>
+            <label class="aut-item-row">
+              <input type="checkbox" data-name="诅咒球" data-price="2" />
+              <span class="aut-item-check" aria-hidden="true"></span>
+              <span class="aut-item-name">诅咒球</span>
+              <strong>2￥</strong>
+            </label>
+            <label class="aut-item-row">
+              <input type="checkbox" data-name="手术果实" data-price="1.5" />
+              <span class="aut-item-check" aria-hidden="true"></span>
+              <span class="aut-item-name">手术果实</span>
+              <strong>1.5￥</strong>
+            </label>
+            <label class="aut-item-row">
+              <input type="checkbox" data-name="史莱姆能量" data-price="2" />
+              <span class="aut-item-check" aria-hidden="true"></span>
+              <span class="aut-item-name">史莱姆能量</span>
+              <strong>2￥</strong>
+            </label>
+            <label class="aut-item-row">
+              <input type="checkbox" data-name="晶洞" data-price="2" />
+              <span class="aut-item-check" aria-hidden="true"></span>
+              <span class="aut-item-name">晶洞</span>
+              <strong>2￥</strong>
+            </label>
+          </div>
+
+          <div class="aut-item-group aut-item-group-gold">
+            <h3>golden name item</h3>
+            <label class="aut-item-row">
+              <input type="checkbox" data-name="宿挪手指" data-price="1" />
+              <span class="aut-item-check" aria-hidden="true"></span>
+              <span class="aut-item-name">宿挪手指</span>
+              <strong>1￥</strong>
+            </label>
+            <label class="aut-item-row">
+              <input type="checkbox" data-name="佛法之轮" data-price="1" />
+              <span class="aut-item-check" aria-hidden="true"></span>
+              <span class="aut-item-name">佛法之轮</span>
+              <strong>1￥</strong>
+            </label>
+            <label class="aut-item-row">
+              <input type="checkbox" data-name="无下限卷轴" data-price="1" />
+              <span class="aut-item-check" aria-hidden="true"></span>
+              <span class="aut-item-name">无下限卷轴</span>
+              <strong>1￥</strong>
+            </label>
+            <label class="aut-item-row">
+              <input type="checkbox" data-name="五条眼罩" data-price="0.5" />
+              <span class="aut-item-check" aria-hidden="true"></span>
+              <span class="aut-item-name">五条眼罩</span>
+              <strong>0.5￥</strong>
+            </label>
+            <label class="aut-item-row">
+              <input type="checkbox" data-name="单色球" data-price="1" />
+              <span class="aut-item-check" aria-hidden="true"></span>
+              <span class="aut-item-name">单色球</span>
+              <strong>1￥</strong>
+            </label>
+            <label class="aut-item-row">
+              <input type="checkbox" data-name="龙珠" data-price="2" />
+              <span class="aut-item-check" aria-hidden="true"></span>
+              <span class="aut-item-name">龙珠</span>
+              <strong>2￥</strong>
+            </label>
+            <label class="aut-item-row">
+              <input type="checkbox" data-name="决心" data-price="1.5" />
+              <span class="aut-item-check" aria-hidden="true"></span>
+              <span class="aut-item-name">决心</span>
+              <strong>1.5￥</strong>
+            </label>
+            <label class="aut-item-row">
+              <input type="checkbox" data-name="JJK角色证明物品" data-price="2.5" />
+              <span class="aut-item-check" aria-hidden="true"></span>
+              <span class="aut-item-name">JJK角色证明物品</span>
+              <strong>2.5￥</strong>
+            </label>
+            <label class="aut-item-row">
+              <input type="checkbox" data-name="JJK角色精通物品" data-price="0.5" />
+              <span class="aut-item-check" aria-hidden="true"></span>
+              <span class="aut-item-name">JJK角色精通物品</span>
+              <strong>0.5￥</strong>
+            </label>
+            <label class="aut-item-row">
+              <input type="checkbox" data-name="神秘物质" data-price="1.5" />
+              <span class="aut-item-check" aria-hidden="true"></span>
+              <span class="aut-item-name">神秘物质</span>
+              <strong>1.5￥</strong>
+            </label>
+            <label class="aut-item-row">
+              <input type="checkbox" data-name="腐化箭头" data-price="1" />
+              <span class="aut-item-check" aria-hidden="true"></span>
+              <span class="aut-item-name">腐化箭头</span>
+              <strong>1￥</strong>
+            </label>
+            <label class="aut-item-row">
+              <input type="checkbox" data-name="骨头" data-price="1.5" />
+              <span class="aut-item-check" aria-hidden="true"></span>
+              <span class="aut-item-name">骨头</span>
+              <strong>1.5￥</strong>
+            </label>
+            <label class="aut-item-row">
+              <input type="checkbox" data-name="洛卡卡卡果实" data-price="1.5" />
+              <span class="aut-item-check" aria-hidden="true"></span>
+              <span class="aut-item-name">洛卡卡卡果实</span>
+              <strong>1.5￥</strong>
+            </label>
+            <label class="aut-item-row">
+              <input type="checkbox" data-name="恶魔果实" data-price="1.5" />
+              <span class="aut-item-check" aria-hidden="true"></span>
+              <span class="aut-item-name">恶魔果实</span>
+              <strong>1.5￥</strong>
+            </label>
+            <label class="aut-item-row">
+              <input type="checkbox" data-name="乙骨犹太的刀" data-price="1" />
+              <span class="aut-item-check" aria-hidden="true"></span>
+              <span class="aut-item-name">乙骨犹太的刀</span>
+              <strong>1￥</strong>
+            </label>
+          </div>
+        </div>
+
+        <p class="aut-empty" id="autEmpty" hidden>暂无项目</p>
+      </section>
+    </div>
+
+    <div class="receipt-backdrop" id="autReceiptModal" hidden>
+      <section class="receipt-window" role="dialog" aria-modal="true" aria-labelledby="autReceiptTitle">
+        <button class="receipt-close" id="autReceiptClose" type="button" aria-label="关闭账单">×</button>
+        <div class="receipt-sheet" id="autReceiptSheet">
+          <div class="receipt-heading">
+            <span>STELLAR HUB / AUT</span>
+            <h2 id="autReceiptTitle">账单</h2>
+          </div>
+          <div class="receipt-rule"></div>
+          <div class="receipt-items" id="autReceiptItems"></div>
+          <div class="receipt-total">
+            <span>总计</span>
+            <strong id="autReceiptTotal">0￥</strong>
+          </div>
+          <div class="receipt-footer">
+            <p>STELLAR HUB AUT SERVICE</p>
+            <p>请去QQ寻找然后将账单发给他</p>
+            <p class="receipt-no-refund">不支持退款</p>
+          </div>
+        </div>
+        <div class="receipt-actions">
+          <button id="autDownloadReceipt" type="button">下载 PNG</button>
+        </div>
+      </section>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+    <script src="aut.js"></script>
+  </body>
+</html>

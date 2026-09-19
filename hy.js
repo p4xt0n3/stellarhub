@@ -12,6 +12,10 @@ const receiptTotal = document.querySelector('#receiptTotal');
 const downloadReceipt = document.querySelector('#downloadReceipt');
 const studioDownload = document.querySelector('#studioDownload');
 
+document.querySelectorAll('.current-year').forEach((year) => {
+  year.textContent = new Date().getFullYear();
+});
+
 studioDownload.addEventListener('click', () => {
   // Roblox's landing endpoint creates the current installer link on each request.
   // The timestamp prevents a cached response from reusing an older download URL.

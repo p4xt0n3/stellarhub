@@ -52,7 +52,7 @@
             <button class="service-card service-card-primary" id="autButton" type="button">
               <span class="card-topline"><span>01</span><span class="arrow">↗</span></span>
               <span class="card-icon icon-spark" aria-hidden="true"></span>
-              <span class="card-title">AUT 服务</span>
+              <span class="card-title">AUT服务</span>
               <span class="card-link">立即进入 <span>→</span></span>
             </button>
 
@@ -67,12 +67,23 @@
       </main>
 
       <footer class="site-footer">
-        <span>© 2024 STELLAR HUB</span>
+        <span>© 2026 - <span class="current-year">2026</span> STELLAR HUB</span>
         <span class="footer-signal"><i></i> CONNECTION STABLE</span>
       </footer>
     </div>
 
     <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+    <div class="game-confirm-backdrop" id="gameConfirm" hidden>
+      <section class="game-confirm" role="dialog" aria-modal="true" aria-labelledby="game-confirm-title">
+        <h2 id="game-confirm-title">🔞是否进入？🔞</h2>
+        <div class="game-confirm-actions">
+          <button class="game-confirm-yes" id="gameConfirmYes" type="button">是</button>
+          <button class="game-confirm-no" id="gameConfirmNo" type="button">否</button>
+        </div>
+      </section>
+    </div>
+
     <script src="app.js"></script>
   </body>
 </html>

@@ -449,6 +449,13 @@
 
 .receipt-footer p { margin: 0; }
 
+.receipt-no-refund {
+  margin-top: 6px !important;
+  color: #9a9dab;
+  font-size: 9px;
+  font-weight: 600;
+}
+
 .receipt-actions button {
   min-width: 128px;
   padding: 11px 18px;
