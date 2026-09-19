@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#090d1c" />
+    <title>神秘游戏</title>
+    <link rel="icon" href="stellaricon.png" type="image/png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Noto+Sans+SC:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="hy.css" />
+  </head>
+  <body class="catalog-page">
+    <div class="space-bg" aria-hidden="true">
+      <div class="nebula nebula-one"></div>
+      <div class="nebula nebula-two"></div>
+      <div class="star-field star-field-back"></div>
+      <div class="star-field star-field-front"></div>
+      <div class="orbit orbit-one"></div>
+      <div class="orbit orbit-two"></div>
+      <div class="glow glow-one"></div>
+      <div class="glow glow-two"></div>
+    </div>
+
+    <div class="page-shell">
+      <header class="site-header">
+        <a class="brand" href="index.html#top" aria-label="返回首页">
+          <span class="brand-mark"><img src="stellaricon.png" alt="" /></span>
+          <span class="brand-copy">
+            <strong>星际社区</strong>
+            <span>STELLAR HUB</span>
+          </span>
+        </a>
+        <a class="back-link" href="index.html">返回首页 <span>↙</span></a>
+      </header>
+
+      <main class="catalog-main">
+        <section class="catalog-heading" aria-labelledby="catalog-title">
+          <p class="eyebrow"><span></span>STELLAR HUB GAMES</p>
+          <h1 id="catalog-title">神秘游戏服务</h1>
+          <p>选择一个项目，查看详细内容。</p>
+        </section>
+
+        <section class="game-list" aria-labelledby="list-title">
+          <div class="list-heading">
+            <p class="section-label">AVAILABLE</p>
+            <h2 id="list-title">游戏列表</h2>
+          </div>
+
+          <div class="game-item" id="gameItem">
+            <label class="game-check" for="playerOneCheck">
+              <input id="playerOneCheck" type="checkbox" data-name="1 Player" data-price="45" />
+              <span class="checkmark" aria-hidden="true"></span>
+              <span class="sr-only">选择 1 Player</span>
+            </label>
+            <button class="game-open" id="playerOneButton" type="button" aria-haspopup="dialog">
+              <span class="game-item-number">01</span>
+              <span class="game-item-icon icon-orbit" aria-hidden="true"></span>
+              <span class="game-item-copy">
+                <strong>1 Player</strong>
+                <span>单人游戏</span>
+              </span>
+            </button>
+            <span class="game-item-arrow" aria-hidden="true">↗</span>
+          </div>
+        </section>
+      </main>
+
+      <footer class="site-footer">
+        <span>© 2024 STELLAR HUB</span>
+        <span class="footer-signal"><i></i> CONNECTION STABLE</span>
+      </footer>
+    </div>
+
+    <div class="modal-backdrop" id="playerModal" hidden>
+      <section class="game-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+        <button class="modal-close" id="modalClose" type="button" aria-label="关闭">×</button>
+
+        <div class="modal-header">
+          <div>
+            <p class="modal-kicker">01 / GAME DETAIL</p>
+            <h2 id="modal-title">单人游戏</h2>
+            <div class="tag-list" aria-label="游戏标签">
+              <span>机器人</span>
+              <span>单人</span>
+              <span>10+动作</span>
+              <span>好友机器人</span>
+            </div>
+          </div>
+          <div class="game-price"><span>PRICE</span><strong>45￥</strong></div>
+        </div>
+
+        <div class="image-gallery" aria-label="单人游戏图片预览">
+          <button class="gallery-image is-blurred" type="button" aria-label="点击查看图片 1">
+            <img src="1plr1.png" alt="单人游戏预览图 1" />
+            <span>点击查看</span>
+          </button>
+          <button class="gallery-image is-blurred" type="button" aria-label="点击查看图片 2">
+            <img src="1plr2.png" alt="单人游戏预览图 2" />
+            <span>点击查看</span>
+          </button>
+          <button class="gallery-image is-blurred" type="button" aria-label="点击查看图片 3">
+            <img src="1plr3.png" alt="单人游戏预览图 3" />
+            <span>点击查看</span>
+          </button>
+          <button class="gallery-image is-blurred" type="button" aria-label="点击查看图片 4">
+            <img src="1plr4.png" alt="单人游戏预览图 4" />
+            <span>点击查看</span>
+          </button>
+          <button class="gallery-image is-blurred" type="button" aria-label="点击查看图片 5">
+            <img src="1plr5.png" alt="单人游戏预览图 5" />
+            <span>点击查看</span>
+          </button>
+          <button class="gallery-image is-blurred" type="button" aria-label="点击查看图片 6">
+            <img src="1plr6.png" alt="单人游戏预览图 6" />
+            <span>点击查看</span>
+          </button>
+        </div>
+      </section>
+    </div>
+
+    <button class="bill-button" id="billButton" type="button" aria-haspopup="dialog">
+      账单 <span id="selectedCount">0</span>
+    </button>
+
+    <div class="receipt-backdrop" id="receiptModal" hidden>
+      <section class="receipt-window" role="dialog" aria-modal="true" aria-labelledby="receipt-title">
+        <button class="receipt-close" id="receiptClose" type="button" aria-label="关闭账单">×</button>
+        <div class="receipt-sheet" id="receiptSheet">
+          <div class="receipt-heading">
+            <span>STELLAR HUB</span>
+            <h2 id="receipt-title">账单</h2>
+          </div>
+          <div class="receipt-rule"></div>
+          <div class="receipt-items" id="receiptItems"></div>
+          <div class="receipt-total">
+            <span>总计</span>
+            <strong id="receiptTotal">0￥</strong>
+          </div>
+          <div class="receipt-footer">
+            <p>猎奇回战作者 - P4XT0N - 1736731564</p>
+            <p>请去QQ寻找然后将账单发给他</p>
+          </div>
+        </div>
+        <div class="receipt-actions">
+          <button id="downloadReceipt" type="button">下载 PNG</button>
+        </div>
+      </section>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+    <script src="hy.js"></script>
+  </body>
+</html>

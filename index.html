@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#090d1c" />
+    <title>星际社区</title>
+    <link rel="icon" href="stellaricon.png" type="image/png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Noto+Sans+SC:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="space-bg" aria-hidden="true">
+      <div class="nebula nebula-one"></div>
+      <div class="nebula nebula-two"></div>
+      <div class="star-field star-field-back"></div>
+      <div class="star-field star-field-front"></div>
+      <div class="orbit orbit-one"></div>
+      <div class="orbit orbit-two"></div>
+      <div class="glow glow-one"></div>
+      <div class="glow glow-two"></div>
+    </div>
+
+    <div class="page-shell">
+      <header class="site-header">
+        <a class="brand" href="#top" aria-label="返回首页">
+          <span class="brand-mark"><img src="stellaricon.png" alt="" /></span>
+          <span class="brand-copy">
+            <strong>星际社区</strong>
+            <span>STELLAR HUB</span>
+          </span>
+        </a>
+        <div class="status-pill"><span class="status-dot"></span>服务在线</div>
+      </header>
+
+      <main id="top">
+        <section class="hero" aria-labelledby="page-title">
+          <div class="hero-orbit" aria-hidden="true"><span></span></div>
+          <p class="eyebrow"><span></span>STELLAR HUB SERVICE</p>
+          <h1 id="page-title">星际社区服务</h1>
+        </section>
+
+        <section class="services" aria-labelledby="services-title">
+          <div class="section-heading">
+            <p class="section-label">EXPLORE</p>
+            <h2 id="services-title">选择你的目的地</h2>
+          </div>
+
+          <div class="service-grid">
+            <button class="service-card service-card-primary" id="autButton" type="button">
+              <span class="card-topline"><span>01</span><span class="arrow">↗</span></span>
+              <span class="card-icon icon-spark" aria-hidden="true"></span>
+              <span class="card-title">AUT 服务</span>
+              <span class="card-link">立即进入 <span>→</span></span>
+            </button>
+
+            <button class="service-card service-card-secondary" id="gameButton" type="button">
+              <span class="card-topline"><span>02</span><span class="arrow">↗</span></span>
+              <span class="card-icon icon-orbit" aria-hidden="true"></span>
+              <span class="card-title">神秘游戏服务</span>
+              <span class="card-link">开始探索 <span>→</span></span>
+            </button>
+          </div>
+        </section>
+      </main>
+
+      <footer class="site-footer">
+        <span>© 2024 STELLAR HUB</span>
+        <span class="footer-signal"><i></i> CONNECTION STABLE</span>
+      </footer>
+    </div>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+    <script src="app.js"></script>
+  </body>
+</html>
