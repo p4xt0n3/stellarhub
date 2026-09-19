@@ -26,6 +26,18 @@
   line-height: 1;
 }
 
+.roblox-warning-copy {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.roblox-warning-note {
+  color: #ffd4d7;
+  font-size: 12px;
+  font-weight: 600;
+}
+
 .roblox-warning a {
   color: #fff1f2;
   text-underline-offset: 3px;
